@@ -1,0 +1,30 @@
+.reserve{
+  background: #eee;
+  & .heading{
+    padding-top: 30px;
+    font-weight: 600;
+    /*padding-bottom: 30px;*/
+  color: #000;
+}
+  & p{
+width: 90%;
+color: #828282;
+font-weight: 200;
+line-height: 1.5;
+margin-bottom: 60px;
+}
+
+& h2{
+  padding-top: 20px;
+}
+
+& img{
+  padding-top: 100px;
+  @mixin atMedium{
+    height:340px;
+  }
+  @mixin atLarge{
+    height:440px;
+  }
+}
+}

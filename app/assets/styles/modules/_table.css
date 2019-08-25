@@ -1,0 +1,98 @@
+.table{
+  background-color: #eee;
+  display: ;
+  position: relative;
+
+  & .col-3{
+    grid-column: span 3;
+  }
+
+  & .wrapper{
+    @mixin atLarge{
+    width: 70%;
+  }
+  }
+
+
+  /*position: relative;*/
+
+  & .row{
+    grid-gap:0;
+
+}
+
+  &-cell{
+      width:100% ;
+      /*padding: 0.8em 1.2em;*/
+      padding: .8em 1em;
+      overflow: hidden;
+      list-style: none;
+      /*border: solid 3px white;*/
+      background: rgba(#000, 0.2);
+      font-size: 5px;
+      @mixin atSmall{
+        font-size: .5em;
+      }
+      @mixin atMedium{
+        font-size: .7em;
+      }
+      @mixin atLarge{
+        font-size: .85em;
+      }
+    }
+
+    &-cell--light{
+      background: rgba(#000, .1);
+    }
+
+  &-cell--head{
+    background-color: slategrey;
+    color: white;
+    & h3{
+
+    font-size: .8em;
+    /*@mixin atLarge{
+      font-size: .7em;
+    }*/
+  }
+ }
+
+ &__info{
+   padding: 50px 0;
+   line-height: 1.25;
+
+
+}
+
+& span{
+  color: rgba(#000, .5);
+  position: absolute;
+  bottom: -15%;
+  left: 5%;
+  font-size: .75em;
+  @mixin atMedium{
+    bottom: -8%;
+    left:0%;
+  }
+  @mixin atLarge{
+  bottom: -10%;
+  left: 15%;
+}
+}
+
+}
+.btn{
+  color: #fc5640;
+  background-color:transparent;
+  border: 2px #fc5640 solid;
+  text-decoration: none;
+  border-radius: 30px;
+  padding:.5rem 2rem;
+  font-weight: 600;
+  
+  &:hover{
+  color: #fff;
+  background-color:#fc5640;
+}
+
+}

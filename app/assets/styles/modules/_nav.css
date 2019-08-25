@@ -1,0 +1,230 @@
+.nav{
+  height:125px;
+  background:rgba(0,0,0,.5);
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+
+input[type="image"]{
+  cursor: pointer;
+  width: 50%;
+  float: left;
+  @mixin atMedium{
+    width: 75%;
+    margin-top: -15px;
+
+  }
+  @mixin atLarge{
+    width: 100%;
+  }
+}
+  & img{
+    left: 5%;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    width: 28%;
+    @mixin atSmall{
+      width: 15%;
+      left: 2%
+    }
+    @mixin atMedium{
+      width: 10%;
+    }
+    @mixin atLarge{
+      left: 5%;
+      width: 10%;
+}
+
+  }
+
+
+
+  & ul{
+    margin-right: 50px;
+    margin-top: -10px;
+    /*display: none;*/
+    @mixin atSmall{
+      margin-right:180px;
+    }
+    @mixin atMedium{
+      margin-right: 70px;
+      display:block;
+      margin-top: 15px;
+  }
+  @mixin atLarge{
+    margin-right: 120px;
+  }
+}
+
+
+  & ul li{
+    position: relative;
+  padding-top:1;
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+    display: block;
+    @mixin atMedium{
+      float:left;
+    }
+  }
+
+  & ul li a{
+    font-size: .8em;
+  text-transform: uppercase;
+padding-bottom: 20px;
+  color: #fff;
+  float:left;
+  padding-left: 30px;
+  text-decoration: none;
+    &:hover{
+      color:  #fc5640;
+
+    }
+
+    @mixin atMedium{
+      font-size: .6em;
+      padding-left: 20px;
+        font-weight:bold;
+    }
+    @mixin atLarge{
+
+      font-size: .75em;
+    }
+  }
+
+  &--is-expanded {
+    background-color: rgba(0, 0, 0, 1);
+    height: 300px;
+  }
+
+
+/******************  Drop Down Menu  **********************/
+
+
+  & ul ul {
+    display:none;
+  	position:absolute;
+  	top:100%;
+  	left:27%;
+  	background:#fff;
+    width:;
+  	padding:0;
+    /*text-align: center;*/
+    & li{
+      z-index: 20;
+      display: inline-block;
+  	float:none;
+
+    & a{
+    font-size: .75em;
+    color:#000;
+  	line-height:120%;
+  	padding:5px 15px
+    }
+    }
+  }
+
+  & ul li:hover > ul
+  {
+  	display:block;
+
+  }
+
+  & ul li:hover > ul li a:hover{
+    color: #fc5640;
+
+  }
+
+/***********  Mobile Menu Icon **************/
+
+
+&__menu-icon {
+  width: 0px;
+  height: 25px;
+  position: absolute;
+  z-index: 10;
+  top: 30px;
+  right: 60px;
+  cursor: pointer;
+  @mixin atMedium{
+    width: 20px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 5px;
+    background-color: #fff;
+    transform-origin: 0 0;
+    transition: transform .3s ease-out;
+    }
+
+  &__middle {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 40px;
+    height: 5px;
+    background-color: #fff;
+    transition: all .3s ease-out;
+    transform-origin: 0 50%;
+    }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 5px;
+    background-color: #fff;
+    transform-origin: 0 100%;
+    transition: transform .3s ease-out;
+    }
+
+    @mixin atMedium{
+      display: none;
+    }
+  }
+
+    &__menu-icon--close-x {
+
+
+      &::before {
+        transform: rotate(45deg) scaleX(1.25) translateY(-9px);
+        }
+
+      .nav__menu-icon__middle {
+        opacity: 0;
+        transform: scaleX(0);
+        }
+
+      &::after {
+        transform: rotate(-45deg) scaleX(1.25) translateY(10px);
+        }
+    }
+}
+
+.primary-nav{
+  opacity: 0;
+  transform: scale(1.2);
+  transition: all .3s ease-out;
+  position: relative;
+  z-index:10;
+  padding-top: 50px;
+  text-align: center;
+  float: right;
+  @mixin atMedium{
+    opacity: 1;
+    padding-top: 40px;
+  }
+
+  &--is-visible{
+    opacity: 1
+  }
+}

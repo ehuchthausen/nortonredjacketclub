@@ -1,0 +1,31 @@
+.gallery{
+
+  & .col-2{
+    grid-column: span 6;
+    margin-bottom: -50px;
+    @mixin atSmall{
+      grid-column: span 4;
+    }
+    @mixin atMedium{
+      grid-column: span 2;
+      margin-bottom: 0px;
+    }
+
+  }
+
+  & .row{
+    grid-gap:0px;
+  }
+
+  & img{
+    height:170px;
+    margin-top: 50px;
+    margin-bottom: -3px;
+  }
+
+
+& .wrapper{
+  width: 100%
+}
+
+}

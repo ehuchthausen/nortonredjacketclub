@@ -1,0 +1,109 @@
+.contact{
+  background: #eee;
+  padding-top: 100px;
+
+
+  &__form{
+    height: ;
+  }
+
+  & .col-4{
+      position: relative;
+  }
+
+  &__info{
+    text-align: center;
+
+  }
+
+  &__title{
+    margin-left: -14px;
+    line-height: .5;
+    color: #383838;
+    font-size: 1.75em;
+    font-weight:300 !important;
+  }
+
+  & .sub-heading{
+    margin-bottom: 0;
+  }
+
+& h3{
+  padding-left: 20px;
+}
+  & h3 + p{
+    text-align: center;
+      line-height: 1.5;
+      padding-bottom: 20px;
+      padding-left:1px;
+      letter-spacing: 1.2px;
+      /*color: #383838;*/
+      font-family: "Montserrat";
+      font-weight: 200;
+      font-size: 1em;
+
+    }
+
+&__form__field{
+  margin-bottom: 25px;
+
+}
+
+
+  &__form{
+    margin-left:-10px;
+  }
+
+  &__form__input{
+    margin-bottom:25px;
+    font-size: 1rem;
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10PX;
+
+    color: #000;
+
+    width: 40%;
+    margin-right: 50px;
+
+
+}
+
+& fieldset{
+  border: 0;
+  margin-top: -10px;
+
+}
+
+}
+
+input[type="text"], input[type="email"], textarea{
+  border: 1px solid #999;
+  /*border-bottom: 1px solid #828282;*/
+
+}
+
+input[type="radio"]{
+  margin-top: 10px;
+}
+
+input[type="text"]:hover, [type="email"]:hover, textarea:hover,
+input[type="text"]:active, [type="email"]:active, textarea:active
+{
+/*border-bottom: 1px solid #828282;*/
+}
+
+
+/*
+input:focus, textarea:focus{
+  outline: none;
+  border: 0;
+  /*border-bottom: 1px solid #a6a6a6;*/
+
+
+input::placeholder, textarea::placeholder{
+  color: #888;
+  font-size: .7em;
+  padding-left: 10px;
+
+}
